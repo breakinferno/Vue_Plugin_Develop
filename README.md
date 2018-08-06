@@ -1,6 +1,6 @@
-# ifcomment
+# lfment
 
-> A Vue.js project
+> A Vue.js project. To complete a comment 'system'
 
 ## Build Setup
 
@@ -13,15 +13,34 @@ npm run dev
 
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 技术栈
+
+Vue + MongoDB + Koa2 + RxJS
+
+## TodoList
+
+### 站主
+
+- [ ] 删除任意评论
+- [ ] 获取评论数
+- [ ] 屏蔽ip或者特定用户
+
+### 所有用户
+
+- [ ] 评论
+- [ ] 回复
+- [ ] 举报
+- [ ] 订阅提醒(邮件)
+- [ ] 赞/踩
+- [ ] @人
+
+### 功能性
+
+- [ ] markdown评论
+- [ ] 模式选择，三种模式：楼中楼、流、引用
+- [ ] 评论数加载，赞数加载，踩数加载
+
+## 思路/设计
+
