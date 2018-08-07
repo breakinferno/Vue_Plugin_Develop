@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "breakinferno",
-  "private": true,
+  "private": false,
+  "main": "./index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
@@ -13,6 +14,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "rxjs": "^6.2.2",
     "vue": "^2.5.2"
   },
   "devDependencies": {
@@ -76,5 +78,9 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breakinferno/lfment.git"
+  }
 }
