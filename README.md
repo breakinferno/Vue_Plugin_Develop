@@ -8,7 +8,13 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# you maybe install json-server when you local development
+npm i -g json-server
+
+# local develop will start mock server and example
+npm run mock
+
+# just to develop
 npm run dev
 
 # build for production with minification
@@ -127,10 +133,12 @@ Vue + ElementUI + MongoDB + Koa2
   ]
 }
 
-// 评论是需要知道父评论id和层级
+// 评论是需要知道父评论id
 // 评论数据
 {
-
+  "id": "111",
+  "parentId": "32223",
+  "children": [],
   "content": "测试",
   "time": "1233223323",
   "anonymous": false,
@@ -138,7 +146,6 @@ Vue + ElementUI + MongoDB + Koa2
   "email": "ceshi@qq.com",
   "avatar": "url",
   "nickname": "xianyu",
-  "path": "111111"      // 该评论自己所在层级序列，顶级评论为0
 }
 
 ```
@@ -154,5 +161,13 @@ emmm，UI苦手，参照wildfire吧。
 ### 其他
 
 想用一下RxJS，但是感觉没地方用啊。。。
+
+### 设计改动
+
+数据库设计改动点：每个表只保存评论，层级关系由children和parent来确定
+
+用户请求一个文章的评论数据时，返回所有该文章的评论，然后经过转换函数转为树状结构返回（其实也可以前端进行转换）然后通过渲染展现
+
+
 
 

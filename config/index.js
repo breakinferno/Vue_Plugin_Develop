@@ -83,4 +83,16 @@ module.exports = {
     productionGzipExtensions: ['js', 'css'],
     bundleAnalyzerReport: process.env.npm_config_report
   },
+  // 设置example代理
+  example: {
+    proxyTable: {
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    }
+  }
 }

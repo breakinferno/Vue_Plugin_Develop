@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <Comment/>
   </div>
 </template>
@@ -8,15 +7,19 @@
 <script>
 // import HelloWorld from './components/HelloWorld'
 import Comment from './components/Comment'
-
+import {getComments} from '../api'
 export default {
   name: 'App',
   components: {
     Comment
+  },
+  created () {
+    getComments({}).then(res => {
+      console.log(res.data)
+    })
   }
 }
 </script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

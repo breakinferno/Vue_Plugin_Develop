@@ -16,6 +16,9 @@ const env = process.env.NODE_ENV === 'testing'
   : require('../config/prod.env')
 
 const webpackConfig = merge(baseWebpackConfig, {
+  entry: {
+    app: './src/index.js'
+  },
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
@@ -31,7 +34,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     path: config.bundle.assetsRoot,
     publicPath: config.bundle.assetsPublicPath,
     filename: '[name].min.js',
-    library: 'LFment',
+    library: 'LFComment',
     libraryTarget: 'umd'
   },
   plugins: [
